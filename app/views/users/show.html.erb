@@ -1,0 +1,10 @@
+<div>
+  <%= @user.id %>
+  <%= @user.first_name %>
+  <%= @user.family_name %>
+  <%= @user.email %>
+  <%= @user.student_id %>
+  <% if user_signed_in? %>
+    <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+  <% end %>
+</div>
